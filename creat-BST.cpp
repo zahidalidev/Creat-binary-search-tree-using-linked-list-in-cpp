@@ -23,23 +23,23 @@ class linkList{
 				copyRoot = temp;
 			}
 			else{
-			while(copyRoot != NULL ){
-				if(temp -> data < copyRoot -> data){
-					if(copyRoot -> left == NULL){
-						copyRoot -> left = temp;
-						return;
+				while(copyRoot != NULL ){
+					if(temp -> data < copyRoot -> data){
+						if(copyRoot -> left == NULL){
+							copyRoot -> left = temp;
+							return;
+						}else{
+							copyRoot = copyRoot -> left;
+						}
 					}else{
-						copyRoot = copyRoot -> left;
-					}
-				}else{
-					if(copyRoot -> right == NULL){
-						copyRoot -> right = temp;
-						return;
-					}else{
-						copyRoot = copyRoot -> right;
+						if(copyRoot -> right == NULL){
+							copyRoot -> right = temp;
+							return;
+						}else{
+							copyRoot = copyRoot -> right;
+						}
 					}
 				}
-			}
 			}
 			
 		}
